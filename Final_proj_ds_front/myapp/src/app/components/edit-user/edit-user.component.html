@@ -1,0 +1,37 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="body" >
+<div class="add-card-Container">
+  <mat-card>
+      <mat-card-content *ngIf="addForm">
+
+          <form [formGroup]="addForm" class="addForm">
+              <mat-form-field class="matFormField">
+                  <input matInput placeholder="Id Movie" formControlName="id">    
+              </mat-form-field>
+              <mat-form-field class="matFormField">
+                  <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+                    <mat-form-field class="matFormField">
+                        <input matInput placeholder="Password" formControlName="password">    
+                </mat-form-field>
+              <mat-form-field class="matFormField">
+                  <input matInput placeholder="Name" formControlName="name">
+              </mat-form-field>
+              <mat-form-field class="matFormField">
+                <input matInput placeholder="Type Account (1 / 0)" formControlName="typeAccount">
+            </mat-form-field>
+            <mat-form-field class="matFormField">
+              <input matInput placeholder="Age" formControlName="age">
+          </mat-form-field>
+              <div class="button2">
+                <button mat-raised-button color="warn"(click)="update()">Update book</button>
+            </div>
+          </form>
+      </mat-card-content>
+  </mat-card>
+</div>
+</body>

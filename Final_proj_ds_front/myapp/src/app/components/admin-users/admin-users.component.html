@@ -1,0 +1,60 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="body" >
+   
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  <a class="navbar-brand" href="admin">MovieDB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="#">CRUD Actors <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">CRUD Directors <span class="sr-only">(current)</span></a>
+      </li> -->
+      <li class="nav-item active">
+        <a class="nav-link" href="admin/movies">CRUD Movies <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="admin/users">CRUD Users <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Back to Home</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="button">
+  <button mat-raised-button color="warn" (click)="addUser()">Add User</button>
+</div>
+<div class="all-movies">
+<div class="card-group" *ngFor="let element of movies" >
+    <div class="card" layout="row" >
+          <div class="card-body">
+            <h3 class="card-title">{{element.id}}</h3>
+            <h6 class="card-text">{{element.email}}</h6>
+            <h6 class="card-text">{{element.password}}</h6>
+            <h6 class="card-text">{{element.name}}</h6>
+            <h6 class="card-text">{{element.typeAccount}}</h6>
+            <h6 class="card-text">{{element.age}}</h6>
+            <div *ngFor="let element2 of element.rating" >
+                <h6 class="card-text">{{element2}}</h6>
+            </div>
+            <!-- <div *ngFor="let element2 of element.directors" >
+                <h6 class="card-text">{{element2.name}}</h6>
+            </div> 
+            <p class="card-text"><small class="text-muted">Rate: {{element.rating}}</small></p> -->
+            <i class="material-icons" id="btn-remove" (click)="deleteUser(element)" mat-suffix>Delete</i>
+            <i class="material-icons" id="btn-remove" (click)="updateUser(element)" mat-suffix> Update</i>
+          </div>
+        </div>
+    </div> 
+  </div>
+</body>

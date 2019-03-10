@@ -1,0 +1,35 @@
+.body{
+    //padding: 150px 0px;
+    background-image: url("../../../assets/books.jpg");
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width :100%;
+    margin:0px;
+}
+#btn-remove{
+   // margin-left: 10%;
+    color:red;
+    cursor: pointer;
+}
+.card{
+    width: 300px;
+    margin-top: 10px;
+    //height: 250px;
+    float:left;
+    //margin-right: 70%;
+   // flex-direction:column;
+  
+
+}
+.all-movies{
+ align-items: center;
+
+}
+.card-group{
+    display: flex;
+    //flex-direction: column;
+    //align-items: center;
+}
